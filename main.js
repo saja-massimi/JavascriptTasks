@@ -17,10 +17,3 @@ let saja = new person("Saja", "AlMassimi", 22, "5/3/2002", ["Divergent", "Hunger
 
 // **********************************************************************************
 
-/*
- */
-function firstName(person) {
-    for (let index = 0; index < array.length; index++) {
-
-    }
-}
