@@ -1,23 +1,24 @@
+"use strict";
 const para = document.getElementById("paragraph");
-const words = para.innerHTML.split(" ");
 
 
-
+const words = para.innerText.split(" ");
 para.innerHTML = words.map(word => {
     if (word.length >= 8)
-        return `<span style="background-color:yellow">${word} </span>`;
-    else
-        return word;
+        return `<span style="background-color:yellow">${word}</span>`;
+    return word;
 }).join(' ');
 
-const sentence = para.innerText.split(".");
-for (let i = 0; i < sentence.length; i++) {
 
-    sentence[i] += ".<br>";
+const link = document.createElement("p");
+link.innerHTML = '<a href="https://google.com">Google</a>';
+document.body.append(link);
+
+let sentences = para.innerHTML.split(".");
+for (let i = 0; i < sentences.length; i++) {
+    sentences[i] = sentences[i].trim() + ".<br>";
 }
+para.innerHTML = sentences.join(" ");
 
-para.innerHTML = sentence.join(' ');
-
-
-const words2 = para.innerText.split(" ");
+const words2 = para.innerText.trim().split(/\s+/);
 document.getElementById("wordCount").innerHTML = words2.length;

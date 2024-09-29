@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Score</title>
+
+    <style>
+        .container {
+            border: 2px solid blue;
+            width: 50%;
+            padding: 30px;
+        }
+
+        h1,
+        h3 {
+            color: blue;
+        }
+
+        form input {
+            margin: 20px;
+        }
+
+        label {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <h1>Use a Test Score Array</h1>
+        <form action="" id="scoreForm">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+            <br>
+            <label for="score">Score:</label>
+            <input type="text" id="score">
+            <br>
+            <button id="add" type="button">Add to Array</button>
+            <button id="displayResults" type="button">Display Results</button>
+            <button id="displayScores" type="button">Display Scores</button>
+
+        </form>
+
+        <div id="results">
+        </div>
+
+        <table id="scoresTable">
+            <thead>
+                <th>Name</th>
+                <th>Score</th>
+            </thead>
+
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+
+    </div>
+    <script src="./advanced2.js"></script>
+</body>
+
+</html>
