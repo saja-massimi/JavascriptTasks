@@ -46,7 +46,7 @@ function addItem(e) {
 }
 form.addEventListener('submit', addItem);
 
-function renderItem() {
+function renderItems() {
     tableBody.innerHTML = '';
     let arr = JSON.parse(localStorage.getItem("flowers"));
 
@@ -62,8 +62,18 @@ function renderItem() {
 
         let itemImg = document.createElement("td");
         itemImg.innerHTML = "<img src='" + arr[i].itemImg + "png' /s>";
+        row.appendChild(itemImg);
+
+        let itemSeason = document.createElement("p");
+        itemSeason.innerHTML = arr[i].itemSeason;
+        row.append(itemSeason);
+
+        let editButton = document.createElement("button");
+
 
     }
 }
+
+renderItems();
 
 
